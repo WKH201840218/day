@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>기념일 계산기</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <section class="photos">
+        <img id="man" src="ataho.jpg" alt="man">
+        <img id="heart" src="heart.png" alt="heart">
+        <img id="woman" src="https://placeimg.com/120/150/people" alt="woman">
+    </section>
+    <div class="container d-flex flex-column justify-content-center align-items-center mt-3">
+        <h3>남♥녀</h3>
+        <h3 id="love">0일째</h3>
+        <h3 class="date">2021.3.1</h3>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+       var now = new Date();
+       var start = new Date("2021-03-01");
+       var timeDiff = now.getTime() - start.getTime();
+       var day = Math.floor(timeDiff / (1000 * 60 * 60 * 24)+1)
+       $("#love").text(day + '일째');
+       // timeDiff ms / 1000 -> 초
+       // 초 -> 분 -> / 60
+       // 분 -> 시 -> / 60 
+       // 시 -> 일 -> / 24
+    </script>
+</body>
+</html>    
+       <!-- var now = new Date(); // 현재 시각 객체
+       console.log(now.getFullYear()); // 연도
+       console.log(now.getMonth()+1); // 월
+       console.log(now.getDate()); // 일
+       // 1970년 1월 1일부터 지금까지 몇 ms가 지났는지
+       console.log(now.getTime());
+       // 특정 날짜 기중의 Date 객체 생성
+       var xmas = new Date('2021-12-25');
+       console.log(xmas);
+       console.log(); -->
+    <!-- // 변수, 배열
+        // 객체(다양한 자료를 한꺼번에 관리)
+        var person = {
+            // vararr = [1,2,3,4,5]
+            // arr[4] - index/주소값
+            name: 'uhs', // person.name - kvs
+            blood: 'A', // person.blood
+            age: 99,
+            hello: function() {
+                console.log("Hello!");
+            } // 내장 객체 -> 우리가 개발할 떄 도움이 되는 기능들을 얻을 수 있음
+        } // json -> net Data -->
